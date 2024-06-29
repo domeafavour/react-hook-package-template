@@ -2,11 +2,18 @@
   "name": "package-name",
   "version": "0.0.1",
   "description": "<description>",
-  "main": ".dist/index.js",
   "types": ".dist/index.d.ts",
+  "main": ".dist/index.js",
+  "module": ".dist/index.mjs",
   "files": [
     ".dist"
   ],
+  "exports": {
+    ".": {
+      "import": "./.dist/index.mjs",
+      "require": "./.dist/index.js"
+    }
+  },
   "keywords": [
     "react",
     "hook"
