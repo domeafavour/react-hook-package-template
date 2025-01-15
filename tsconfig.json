@@ -2,6 +2,7 @@
   "include": ["src/**/*"],
   "compilerOptions": {
     "declaration": true,
+    "jsx": "react-jsx",
     "declarationDir": "./types",
     "emitDeclarationOnly": true,
     "forceConsistentCasingInFileNames": true,
