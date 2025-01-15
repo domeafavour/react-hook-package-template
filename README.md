@@ -5,12 +5,13 @@
 
 ## Prepare
 
-Update package.json with your package `name`, `description`, `author`, `repository`, etc.
+Update package.json with your package `name`, `description`, `keywords`, `author`, `repository`, etc.
 
 For example:
 
 - package name: `react-use-my-hook`
 - description: `A react hook package`
+- keywords: `["react", "hook", "your-keyword"]`
 - author: `John`
 - repository: `https://github.com/john/react-use-my-hook.git`
 
@@ -28,19 +29,30 @@ For example:
     ],
     "keywords": [
       "react",
-      "hook"
+--    "hook"
+++    "hook",
+++    "your-keyword"
     ],
 --  "author": "<author name>",
 ++  "author": "John",
     "license": "MIT",
     "peerDependencies": {
-      "react": ">=16.8.0"
+      "react": ">=16.8.0",
+      "react-dom": ">=16.8.0"
     },
     "devDependencies": {
+      "@testing-library/dom": "^10.4.0",
+      "@testing-library/jest-dom": "^6.6.3",
+      "@testing-library/react": "^16.1.0",
       "@types/react": ">=16.8.0",
+      "@types/react-dom": ">=16.8.0",
+      "happy-dom": "^16.5.3",
       "react": ">=16.8.0",
+      "react-dom": ">=16.8.0",
       "tsup": "^8.0.2",
-      "typescript": "^5.4.5"
+      "typescript": "^5.4.5",
+      "typescript": "^5.4.5",
+      "vitest": "^2.1.8"
     },
     "repository": {
       "type": "git",
@@ -48,6 +60,7 @@ For example:
 ++    "url": "https://github.com/john/react-use-my-hook.git"
     },
     "scripts": {
+      "test": "vitest",
       "build": "tsup"
     }
   }
@@ -58,6 +71,12 @@ For example:
 
 ```bash
 pnpm build
+```
+
+## Test
+
+```bash
+pnpm test
 ```
 
 ## Publish
