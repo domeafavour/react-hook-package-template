@@ -1,1 +1,1 @@
-export * from "./useHelloWorld";
+export * from "./useCounter";
